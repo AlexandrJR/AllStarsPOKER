@@ -11,8 +11,7 @@ body {
 
 /*header main*/
 .header {
-    margin: 0;
-    margin-left: 14vw;
+    margin: 0 auto;
     width: 72vw;
     height: 70vh;
     background-color: red;
