@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Archivo Narrow', sans-serif;
+*/
 
-div {
-    font-family: 'Anton', sans-serif;
+body {
+    margin:0;
 }
 
-.sanjaGay {
-    font-family: 'Archivo Narrow', sans-serif;
+/*header main*/
+.header {
+    margin: 0;
+    margin-left: 14vw;
+    width: 72vw;
+    height: 70vh;
+    background-color: red;
+    display: flex;
+}
+
+/*header left side*/
+.headerLeft {
+    margin: 0;
+    background-color: blue;
+    width: 35%;
+    height: 100%;
+}
+
+.money {
+    margin-top: 15%;
+    font-family: 'Anton', sans-serif;
 }
