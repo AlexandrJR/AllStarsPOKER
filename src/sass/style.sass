@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap')
+//Main Color For Site
+$mainColor: #d9082f
+$gray: #515151
+$black: #2b2b2b
+$mainDarker: #a30623
+$anton: 'Anton', sans-serif
+$archivo: 'Archivo Narrow', sans-serif
 *
 	box-sizing: border-box
 body
   margin: 0
-  background-color: f7f7f7
+  background-color: #f7f7f7
 // declare container
 .container
 	margin: 0 auto
 	width: 72vw
+	display: flex
+	flex-direction: column
+// Header
+.header
+	width: 100%
+	height: 80vh
 	display: flex
 // header left side
 .leftSide
@@ -19,53 +32,109 @@ body
 	
 	&_money
 		margin-top: 30%
-		font-family: 'Anton', sans-serif
+		font-family: $anton
 		font-size: 1.2vw
-		color: #d9082f
+		color: $mainColor
 	&_allStars
-		font-family: 'Anton', sans-serif
-		font-size: 2.2vw
+		font-family: $anton
+		font-size: 3vw
 		margin-top: -5%
+		color: $black
 	&_title
-		font-family: 'Archivo Narrow', sans-serif
-		font-size: 1.8vw
+		font-family: $archivo
+		font-size: 2.5vw
 		color: #515151
-		margin-top: -8%
+		margin-top: -15%
 		letter-spacing: 0.1vw
 	&_start
+		transition: 0.3s
 		display: block
 		text-decoration: none
-		margin-top: -2%
-		font-family: 'Archivo Narrow', sans-serif
-		color: black
+		margin-top: -5%
+		font-family: $archivo
+		color: $black
 		width: 9vw
 		height: 6vh
-		background-color: #d9082f
+		background-color: $mainColor
 		border-radius: 10px
 		line-height: 6vh
 		text-align: center
 		font-size: 1.3vw
+	&_start:hover
+		color: $mainDarker
 	&_online
 		display: flex
 		background-color: white
 		width: 13vw
-		height: 32%
+		height: 30%
 		border-radius: 15px
 		flex-direction: column
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-		margin-top: 6%
+		margin-top: 10%
 		&_descr
-			display: block
-			font-family: 'Archivo Narrow', sans-serif
+			display: $black
+			font-family: $archivo
 			color: #515151
 			margin-left: 8%
 			margin-top: 7%
 			letter-spacing: 0.1vw
+			font-size: 0.8vw
 		&_amount
 			margin: 0
 			display: block
 			font-size: 3.5vw
-			font-family: 'Anton', sans-serif
-			color: #d9082f
+			font-family: $anton
+			color: $mainColor
 			margin-left: 8%
-			margin-top: 5%
+			margin-top: 8%
+//Right Side
+.rightSide
+	width: 60%
+	height: 100%
+	&_background
+		background: linear-gradient(-30deg, $mainColor 10%, #db2874)
+		width: 42vw
+		height: 73vh
+		border-radius: 50px
+		margin-left: 2vw
+		margin-top: 4vh
+	&_img
+		position: relative
+		margin-top: - 75vh
+		width: 47vw
+//Game Modes Container
+.gameModes
+	height: 70vh
+	display: flex
+	flex-direction: column
+	align-items: center
+	//Text Container
+	&_text
+		margin-top: 4vw
+		&_title
+			margin: 0
+			font-family: $anton
+			text-align: center
+			font-size: 2vw
+			color: $black
+		&_desc
+			margin: 0
+			font-family: $archivo
+			text-align: center
+			color: $gray
+			font-size: 1.1vw
+			letter-spacing: 0.1vw
+	//Card Container
+	&_cards
+		width: 100%
+		height: 60vh
+		background-color: red
+		display: flex
+		&_blackJack
+			width: 15vw
+			height: 15vh
+			background-color: $black
+		&_poker
+			width: 15vw
+			height: 15vh
+			background-color: green
