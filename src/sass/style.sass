@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap')
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap')
+
 //Main Color For Site
 $mainColor: #d9082f
 $gray: #515151
@@ -8,11 +9,23 @@ $black: #2b2b2b
 $mainDarker: #a30623
 $anton: 'Anton', sans-serif
 $archivo: 'Archivo Narrow', sans-serif
+
+@mixin title
+	font-family: $anton
+	letter-spacing: 0.05vw
+	color: #2b2b2b
+@mixin subtitle
+	font-family: $archivo
+	letter-spacing: 0.08vw
+	color: #525151
+	
 *
 	box-sizing: border-box
+
 body
   margin: 0
   background-color: #f7f7f7
+
 // declare container
 .container
 	margin: 0 auto
@@ -29,25 +42,23 @@ body
 	margin: 0
 	width: 35%
 	height: 100%
-	
+	&_allStars
+		font-size: 3vw
+		margin-top: -5%
+		@include title
 	&_money
 		margin-top: 30%
 		font-family: $anton
 		font-size: 1.2vw
 		color: $mainColor
-	&_allStars
-		font-family: $anton
-		font-size: 3vw
-		margin-top: -5%
-		color: $black
-	&_title
-		font-family: $archivo
+	&_subtitle
 		font-size: 2.5vw
-		color: #515151
-		margin-top: -15%
+		margin-top: -13%
 		letter-spacing: 0.1vw
+		@include subtitle
+		
 	&_start
-		transition: 0.3s
+		transition: 0.5s all
 		display: block
 		text-decoration: none
 		margin-top: -5%
@@ -60,8 +71,8 @@ body
 		line-height: 6vh
 		text-align: center
 		font-size: 1.3vw
-	&_start:hover
-		color: $mainDarker
+		&:hover
+			background-color: $mainDarker
 	&_online
 		display: flex
 		background-color: white
@@ -224,3 +235,105 @@ body
 					margin-top: 25vh
 					margin-left: 4vw
 					transform: rotate(-20deg)
+.premium
+	margin-top: 4.8%
+	&_wrapper
+		display: flex
+		justify-content: space-between
+	&_descr
+		&_allStars
+			font-size: 2.05vw
+			text-align: left
+			@include title
+		&_info
+			margin-top: 0.9vw
+			font-size: 1.6vw
+			line-height: 1.6vw
+			@include subtitle
+			
+		&_btn
+			margin-top: 1.7vw
+			width: 8.7vw
+			height: 5vh
+			border-radius: 0.5vw
+			background-color: $mainColor
+			font-family: $archivo
+			letter-spacing: 0.08vw
+			font-size: 1.6vw
+			color: #2b2b2b
+			text-align: center
+			vertical-align: middle
+			&:hover
+				background-color: $mainDarker
+				transition: 0.5s all
+	&_block
+		margin-top: 5px
+		width: 310px
+  		height: 247px
+		border-radius: 1.5vw
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25)
+		&_header
+			font-size: 2.05vw
+			font-family: $archivo
+			color: #2b2b2b
+			letter-spacing: 1.98px
+			margin-top: 23px
+			margin-left: 26px
+		&_descr
+			font-size: 1.5vw
+			font-family: $archivo
+			line-height: 2vw
+			letter-spacing: 1.95px
+			text-align: left
+			color: #727272
+			margin-left: 26px
+.seasonEvent
+	min-height: 99vh
+	padding: 12vw 0 10.9vw 0
+	position: relative
+	&_santa
+		position: absolute
+		top: 8.1vw
+		left: 7.3vw
+		z-index: -1
+	&_shadow
+		position: relative
+		z-index: 1
+		bottom: -37.5vw
+		left: 3.7vw
+	&_wrapper
+		width: 42.4vw
+		margin-left: 30vw
+	&_header
+		width: 30vw
+		float: right
+		text-align: right
+		@include title
+		font-size: 2.9vw
+	&_info
+		width: 31.6vw
+		float: right
+		text-align: right
+		@include subtitle
+		font-size: 2.08vw
+	&_bonus
+		margin-top: 10.1vh
+		padding: 2.5vw 2.1vw
+		width: 42.4vw
+		height: 24.5vh
+		float: right
+		background: linear-gradient(-40deg, $mainColor -10%, #db2874)
+		border-radius: 1.3vw
+		display: flex
+		&_header
+			@include title
+			font-size: 1.9vw
+			color: #fafafa
+		&_info
+			@include subtitle
+			font-size: 1.35vw
+			color: #fafafa
+		&_candy
+			margin-left: 7.8vw
+			
+		
