@@ -335,5 +335,56 @@ body
 			color: #fafafa
 		&_candy
 			margin-left: 7.8vw
-			
+
+.review
+	margin: 0 auto
+	width: 72vw
+	min-height: 90vh
+	display: flex
+	flex-direction: column
+	&_header
+		font-size: 2.6vw
+		@include title
+		margin: 0 auto
+	&_allreviews
+		margin: 0 auto
+		a
+			font-size: 2.3vw
+			@include subtitle
+			text-decoration: none
+	&_text
+		padding: 1.04vw 1.5vw
+		font-family: $archivo
+		font-size: 1.3vw
+		letter-spacing: 0.1vw
+		text-align: center
+		color: #7b7b7b
+	&_block
+		margin: 3.6vw auto 2.6vw
+		padding: 1.56vw 2.7vw
+		width: 53.6vw
+		height: 55vh
+		border-radius: 2.6vw
+		box-shadow: 0 0 27px 0 #0000001c
+		border: solid 0.05vw #d90e3c
+		background-color: #fafafa
+	&_author
+		display: flex
+		&_info
+			margin-left: 1.04vw
+			padding: 0.7vw
+			display: flex
+			flex-direction: column
+			&_nickname
+				font-family: $anton
+				font-size: 2.3vw
+				@include title
+			&_status
+				font-family: $archivo
+				font-size: 1.35vw
+				line-height: 1.35vw
+				letter-spacing: 0.09vw
+				text-align: left
+				color: #7b7b7b
 		
+	
